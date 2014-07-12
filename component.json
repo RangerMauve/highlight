@@ -4,15 +4,16 @@
   "description": "Have a box flow around and highlight currently selected sections",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "jkroso/computed-style": "*",
+    "jkroso/position": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js"
-  ],
-  "templates": [
-    "template.html"
+    "index.js",
+    "matches.js"
   ],
   "styles": [
     "highlight.css"
