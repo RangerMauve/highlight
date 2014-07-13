@@ -2,7 +2,7 @@
   "name": "highlight",
   "repo": "rangermauve/highlight",
   "description": "Have a box flow around and highlight currently selected sections",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [],
   "dependencies": {
     "jkroso/computed-style": "*",
