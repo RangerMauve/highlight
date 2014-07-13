@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<title>Highlight test</title>
+<link rel="stylesheet" href="build/build.css" />
+<style>
+	.block {
+		width: 98px;
+		height: 98px;
+		box-sizing: border-box;
+		background: #FA6;
+		margin: 1px;
+		float: left;
+	}
+	.block:hover {
+		opacity: 0.8;
+	}
+	.container {
+		width: 300px;
+		padding: 0px;
+		border: 1px solid black;
+	}
+	.cf:before,
+	.cf:after {
+		content: " ";
+		/* 1 */
+		display: table;
+		/* 2 */
+	}
+	.cf:after {
+		clear: both;
+	}
+</style>
+
+<div class="container cf">
+	<div class="block" data-pos="0-0"></div>
+	<div class="block" data-pos="0-1"></div>
+	<div class="block" data-pos="0-2"></div>
+
+	<div class="block" data-pos="1-0"></div>
+	<div class="block" data-pos="1-1"></div>
+	<div class="block" data-pos="1-2"></div>
+
+	<div class="block" data-pos="2-0"></div>
+	<div class="block" data-pos="2-1"></div>
+	<div class="block" data-pos="2-2"></div>
+</div>
+
+<div id="info"></div>
+<script src="build/build.js"></script>
+<script>
+	document.addEventListener("click", function (e) {
+		var element = e.target;
+		if (element.classList.contains("block"))
+			highlight(e.target);
+		else highlight();
+	}, true);
+</script>

@@ -12,8 +12,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js",
-    "matches.js"
+    "index.js"
   ],
   "styles": [
     "highlight.css"
