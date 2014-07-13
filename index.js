@@ -10,7 +10,6 @@ module.exports = function (element) {
 function hide_highlighter() {
 	var highlighter = fetch_highlighter();
 	highlighter.classList.add("rm-highlight-hidden");
-	console.log("Hid highlighter", highlighter);
 }
 
 function fetch_highlighter() {
@@ -19,15 +18,12 @@ function fetch_highlighter() {
 		highlighter = document.createElement("div");
 		highlighter.classList.add("rm-highlight");
 		highlighter.classList.add("rm-highlight-hidden");
-		console.log("Generated highlighter", highlighter);
 	}
-	console.log("Fetched highlighter", highlighter);
 	return highlighter;
 }
 
 
 function highlight(element) {
-	console.log("Highlighting", element);
 	var highlighter = fetch_highlighter();;
 
 	document.body.insertBefore(highlighter, document.body.childNodes[0]);
@@ -37,7 +33,7 @@ function highlight(element) {
 	var off_x = parseInt(s.getPropertyValue('border-left-width'));
 	var off_y = parseInt(s.getPropertyValue('border-top-width'));
 	highlighter.classList.remove("rm-highlight-hidden");
-	console.log(off_x, off_y);
+	highlighter.style.top = pos.top - off_y + "px";
 	highlighter.style.top = pos.top - off_y + "px";
 	highlighter.style.height = pos.height + "px";
 	highlighter.style.left = pos.left - off_x + "px";
