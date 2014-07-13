@@ -2,6 +2,13 @@
 <title>Highlight test</title>
 <link rel="stylesheet" href="build/build.css" />
 <style>
+	html,
+	body {
+		padding: 0px;
+		margin: 0px;
+		font-family: Helvetica;
+		text-align: center;
+	}
 	.block {
 		width: 98px;
 		height: 98px;
@@ -17,6 +24,7 @@
 		width: 300px;
 		padding: 0px;
 		border: 1px solid black;
+		margin: 20px auto;
 	}
 	.cf:before,
 	.cf:after {
@@ -30,6 +38,7 @@
 	}
 </style>
 
+<h1>Highlight Demo</h1>
 <div class="container cf">
 	<div class="block" data-pos="0-0"></div>
 	<div class="block" data-pos="0-1"></div>
@@ -43,6 +52,10 @@
 	<div class="block" data-pos="2-1"></div>
 	<div class="block" data-pos="2-2"></div>
 </div>
+
+<p>
+	Click on the blocks to highlight them.
+</p>
 
 <div id="info"></div>
 <script src="build/build.js"></script>
